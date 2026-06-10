@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -561,6 +561,36 @@
         input, button {
             -webkit-tap-highlight-color: transparent;
         }
+        /* DOCTOR IMAGE ADDED: only this new style for the image - no other changes */
+        .doctor-img-left {
+            max-width: 140px;
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border: 3px solid white;
+            background: #f0f7fc;
+            display: block;
+        }
+        .heading-with-doc {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 8px 0 4px 0;
+        }
+        .heading-with-doc .text-heading {
+            flex: 1;
+        }
+        @media (max-width: 550px) {
+            .heading-with-doc {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .doctor-img-left {
+                max-width: 100px;
+                margin-bottom: 8px;
+            }
+        }
         /* Small screens optimization */
         @media (min-width: 480px) {
             .hero h1 {
@@ -669,7 +699,14 @@
         <div class="hero">
             <div class="hero-content">
                 <span class="hero-badge"><i class="fas fa-tooth"></i> All Dental Treatments</span>
-                <h1>UNDER ONE ROOF! <span>GENERAL DENTISTRY</span></h1>
+                <!-- ONLY ADDED: Doctor image on left under "UNDER ONE ROOF! GENERAL DENTISTRY" line. Everything else unchanged -->
+                <div class="heading-with-doc">
+                    <img class="doctor-img-left" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Leading Dentist" style="background:#e6f0f9;">
+                    <div class="text-heading">
+                        <h1>UNDER ONE ROOF! <span>GENERAL DENTISTRY</span></h1>
+                    </div>
+                </div>
+                <!-- Rest of content unchanged -->
                 <div class="hero-features">
                     <span class="feature-chip"><i class="fas fa-bolt"></i> RCT</span>
                     <span class="feature-chip"><i class="fas fa-light-emergency"></i> Laser</span>
